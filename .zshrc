@@ -25,9 +25,11 @@ if [[ -z "$ZSH_CACHE_DIR" ]]; then
 fi
 
 # find out how we got 256 colours - multiple strategies are used... chrissicool/zsh-256color
-ZSH_256COLOR_DEBUG=1
+#ZSH_256COLOR_DEBUG=1
+
+source ~/dotfiles/.powerlevel10k_config.sh
 
 # and finally - load the lovely plugins... quickly
 # using Antibody static loading - https://getantibody.github.io/usage/
-# remember to run `antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh` when you update your plugins
+# remember to run `antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh` when you update your plugins
 source ~/.zsh_plugins.sh
