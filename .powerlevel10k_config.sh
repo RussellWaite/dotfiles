@@ -1,14 +1,3 @@
-# these worked - so we are good to go...
-#POWERLEVEL9K_TIME_FOREGROUND='red'
-#POWERLEVEL9K_TIME_BACKGROUND='blue'
-
-
-$echo $POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS  ✔  328  09:08:24 
-status root_indicator background_jobs history time
-$echo $POWERLEVEL9K_LEFT_PROMPT_ELEMENTS   ✔  329  09:09:58 
-context dir vcs
-
-
 # use like this
 # vcs 	            CLEAN, UNTRACKED, MODIFIED
 # host 	            LOCAL, REMOTE
@@ -20,11 +9,16 @@ context dir vcs
 # POWERLEVEL9K_<segment>_<state>_[BACKGROUND|FOREGROUND]=''
 
 # prompt currently look like:
-#(context dir vcs)               (status root_indicator background_jobs history time)
+#$echo $POWERLEVEL9K_LEFT_PROMPT_ELEMENTS
+                                            #$echo $POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS
+#(context dir vcs)                          (status root_indicator background_jobs history time)
+
+
 
 POWERLEVEL9K_TIME_FOREGROUND='plum1'
 POWERLEVEL9K_TIME_BACKGROUND='grey11'
 
+#context (left 1)
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='chartreuse1'
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='grey15'
 POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND='lightcoral'
@@ -36,7 +30,47 @@ POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND='white'
 POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND='deeppink1'
 POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND='grey15'
 
-# if I sudo su up - i lose the customer propmt anyway...
+# if I sudo su up - I lose the customer propmt anyway...
 POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='lightred'
 POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='grey15'
-# change these next!
+
+
+#dir (left 2)
+HOME, HOME_SUBFOLDER, DEFAULT, ETC
+POWERLEVEL9K_DIR_HOME_FOREGROUND='grey3'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='deeppink1'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='grey3'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='hotpink'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='grey3'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='107'
+POWERLEVEL9K_DIR_ETC_FOREGROUND='grey3'
+POWERLEVEL9K_DIR_ETC_BACKGROUND='087'
+
+#vcs (left 3)
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='white'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='064'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='white'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='166'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='white'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='125'
+
+#status (right 1)
+POWERLEVEL9K__FOREGROUND='lightred'
+POWERLEVEL9K__BACKGROUND='grey15'
+
+#root_indicator  (right 2)
+POWERLEVEL9K__FOREGROUND='lightred'
+POWERLEVEL9K__BACKGROUND='grey15'
+
+#background_jobs (right 3)
+POWERLEVEL9K__FOREGROUND='lightred'
+POWERLEVEL9K__BACKGROUND='grey15'
+
+#history (right 4)
+POWERLEVEL9K__FOREGROUND='lightred'
+POWERLEVEL9K__BACKGROUND='grey15'
+
+#time (right 5)
+
+POWERLEVEL9K__FOREGROUND='lightred'
+POWERLEVEL9K__BACKGROUND='grey15'
