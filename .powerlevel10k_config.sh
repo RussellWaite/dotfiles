@@ -12,7 +12,7 @@
 #$echo $POWERLEVEL9K_LEFT_PROMPT_ELEMENTS
                                             #$echo $POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS
 #(context dir vcs)                          (status root_indicator background_jobs history time)
-
+#POWERLEVEL9K_MODE="CodeNewRoman Nerd Font Mono"
 
 
 POWERLEVEL9K_TIME_FOREGROUND='plum1'
@@ -36,7 +36,7 @@ POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='grey15'
 
 
 #dir (left 2)
-HOME, HOME_SUBFOLDER, DEFAULT, ETC
+#HOME, HOME_SUBFOLDER, DEFAULT, ETC
 POWERLEVEL9K_DIR_HOME_FOREGROUND='grey3'
 POWERLEVEL9K_DIR_HOME_BACKGROUND='deeppink1'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='grey3'
