@@ -15,6 +15,7 @@ compinit
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH:$HOME/.linkerd2/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # setup expected defaults for ohmyzsh based plugins (kubectl for completion)
 if [[ -z "$ZSH" ]]; then
@@ -30,6 +31,7 @@ fi
 # fix for using powerlevel10k in tmux
 TERM=screen-256color
 source ~/dotfiles/.powerlevel10k_config.sh
+alias colours='f(){ for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done; }; f'
 
 # and finally - load the lovely plugins... quickly
 # using Antibody static loading - https://getantibody.github.io/usage/
