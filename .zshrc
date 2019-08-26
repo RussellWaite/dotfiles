@@ -14,7 +14,7 @@ compinit
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$GOPATH/bin:$GOROOT/bin:/snap/bin:$PATH
 
 # setup expected defaults for ohmyzsh based plugins (kubectl for completion)
 if [[ -z "$ZSH" ]]; then
