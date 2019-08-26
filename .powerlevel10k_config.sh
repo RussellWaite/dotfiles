@@ -12,7 +12,7 @@
 #$echo $POWERLEVEL9K_LEFT_PROMPT_ELEMENTS
                                             #$echo $POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS
 #(context dir vcs)                          (status root_indicator background_jobs history time)
-
+#POWERLEVEL9K_MODE="CodeNewRoman Nerd Font Mono"
 
 
 POWERLEVEL9K_TIME_FOREGROUND='plum1'
