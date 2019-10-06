@@ -8,7 +8,7 @@ ln -sv ~/dotfiles/.profile ~
 ln -sv ~/dotfiles/.zshrc ~
 ln -sv ~/dotfiles/.vimrc ~
 ln -sv ~/dotfiles/.tmux.conf ~
-
+ln -sv ~/dotfiles/alacritty.yml ~/.config/alacritty.yml
 #need to install antibody if not already installed - or just warn user...
 
 antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh
