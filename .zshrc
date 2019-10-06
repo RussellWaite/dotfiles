@@ -34,6 +34,7 @@ TERM=screen-256color
 source ~/dotfiles/.powerlevel10k_config.sh
 alias colours='f(){ for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done; }; f'
 alias nvim=nvim.appimage
+alias lsx='exa -lhaTR --git'
 
 # and finally - load the lovely plugins... quickly
 # using Antibody static loading - https://getantibody.github.io/usage/
