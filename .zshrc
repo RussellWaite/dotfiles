@@ -16,6 +16,7 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:/snap/bin:$PATH:$HOME/.linkerd2/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$PATH:/usr/local/lib/nodejs/node-v13.6.0-linux-x64/bin
 export EDITOR=/home/user6/.local/bin/nvim.appimage
 
 # setup expected defaults for ohmyzsh based plugins (kubectl for completion)
@@ -40,3 +41,5 @@ alias lsx='exa -lhaTR --git'
 # using Antibody static loading - https://getantibody.github.io/usage/
 # remember to run `antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh` when you update your plugins
 source ~/.zsh_plugins.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
