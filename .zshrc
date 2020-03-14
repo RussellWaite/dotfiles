@@ -34,6 +34,7 @@ fi
 if [[ -z "$ZSH_CACHE_DIR" ]]; then
   ZSH_CACHE_DIR="$ZSH/cache"
 fi
+mkdir -p $ZSH_CACHE_DIR
 
 # find out how we got 256 colours - multiple strategies are used... chrissicool/zsh-256color
 #ZSH_256COLOR_DEBUG=1
