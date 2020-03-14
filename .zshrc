@@ -19,20 +19,13 @@ pathadd() {
     fi
 }
 
-export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 pathadd $GOPATH/bin
-pathadd $GOROOT/bin
-pathadd /snap/bin
-pathadd $HOME/.linkerd2/bin
-pathadd ${KREW_ROOT:-$HOME/.krew}/bin
-pathadd /usr/local/lib/nodejs/node-v13.6.0-linux-x64/bin
-#export PATH=$GOPATH/bin:$GOROOT/bin:/snap/bin:$PATH:$HOME/.linkerd2/bin
-#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-#export PATH=$PATH:/usr/local/lib/nodejs/node-v13.6.0-linux-x64/bin
-export EDITOR=/home/user6/.local/bin/nvim.appimage
 
+#pathadd $HOME/.linkerd2/bin
+#pathadd ${KREW_ROOT:-$HOME/.krew}/bin
 
+export EDITOR=nvim
 
 # setup expected defaults for ohmyzsh based plugins (kubectl for completion)
 if [[ -z "$ZSH" ]]; then
@@ -46,10 +39,12 @@ fi
 #ZSH_256COLOR_DEBUG=1
 
 # fix for using powerlevel10k in tmux
-TERM=screen-256color
+#export TERM=screen-256color
+export TERM="xterm-256color"
+
 source ~/dotfiles/.powerlevel10k_config.sh
 alias colours='f(){ for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done; }; f'
-alias nvim=nvim.appimage
+
 alias lsx='exa -lhaTR --git'
 
 # and finally - load the lovely plugins... quickly
@@ -58,3 +53,4 @@ alias lsx='exa -lhaTR --git'
 source ~/.zsh_plugins.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/nvm/init-nvm.sh

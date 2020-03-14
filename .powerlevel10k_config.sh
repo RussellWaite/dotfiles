@@ -30,7 +30,7 @@ POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND='white'
 POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND='deeppink1'
 POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND='grey15'
 
-# if I sudo su up - I lose the customer propmt anyway...
+# if I sudo su up - I lose the custom propmt anyway...
 POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='lightred'
 POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='grey15'
 
