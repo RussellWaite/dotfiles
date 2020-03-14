@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 unsetopt beep
 # End of lines configured by zsh-newuser-install
 
@@ -12,12 +12,27 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+#trying out a more efficient path update (i.e. don't keep adding duplicates)
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:/snap/bin:$PATH:$HOME/.linkerd2/bin
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH=$PATH:/usr/local/lib/nodejs/node-v13.6.0-linux-x64/bin
+pathadd $GOPATH/bin
+pathadd $GOROOT/bin
+pathadd /snap/bin
+pathadd $HOME/.linkerd2/bin
+pathadd ${KREW_ROOT:-$HOME/.krew}/bin
+pathadd /usr/local/lib/nodejs/node-v13.6.0-linux-x64/bin
+#export PATH=$GOPATH/bin:$GOROOT/bin:/snap/bin:$PATH:$HOME/.linkerd2/bin
+#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+#export PATH=$PATH:/usr/local/lib/nodejs/node-v13.6.0-linux-x64/bin
 export EDITOR=/home/user6/.local/bin/nvim.appimage
+
+
 
 # setup expected defaults for ohmyzsh based plugins (kubectl for completion)
 if [[ -z "$ZSH" ]]; then
