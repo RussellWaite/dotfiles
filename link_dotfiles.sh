@@ -10,6 +10,9 @@ ln -sv ~/dotfiles/.vimrc ~
 ln -sv ~/dotfiles/.tmux.conf ~
 ln -sv ~/dotfiles/alacritty.yml ~/.config/alacritty.yml
 ln -sv ~/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -sv ~/dotfiles/sway_conf ~/.config/sway/config
+ln -sv ~/dotfiles/waybar_config ~/.config/waybar/config
+ln -sv ~/dotfiles/waybar_style.css ~/.config/waybar/style.css
 #need to install antibody if not already installed - or just warn user...
 
 antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh
