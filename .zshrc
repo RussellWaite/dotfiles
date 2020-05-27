@@ -21,9 +21,10 @@ pathadd() {
 
 export GOPATH=$HOME/go
 pathadd $GOPATH/bin
-
-#pathadd $HOME/.linkerd2/bin
-#pathadd ${KREW_ROOT:-$HOME/.krew}/bin
+pathadd ~/bin
+pathadd ~/bin/VSCode-linux-x64/bin
+pathadd $HOME/.linkerd2/bin
+pathadd ${KREW_ROOT:-$HOME/.krew}/bin
 
 export EDITOR=nvim
 
@@ -47,11 +48,14 @@ source ~/dotfiles/.powerlevel10k_config.sh
 alias colours='f(){ for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done; }; f'
 
 alias lsx='exa -lhaTR --git'
-
+alias start_i3='XDG_SESSION_TYPE=wayland dbus-run-session i3'
+alias start_gnome='XDG_SESSION_TYPE=wayland dbus-run-session gnome-session'
 # and finally - load the lovely plugins... quickly
 # using Antibody static loading - https://getantibody.github.io/usage/
 # remember to run `antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh` when you update your plugins
 source ~/.zsh_plugins.sh
+
+source ~/dotfiles/helm_completions.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /usr/share/nvm/init-nvm.sh
