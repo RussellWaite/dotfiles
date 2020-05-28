@@ -141,6 +141,7 @@ label:focus {
 
 #network.disconnected {
     background-color: #f53c3c;
+    color: #ffffff;
 }
 
 #pulseaudio {
@@ -172,6 +173,7 @@ label:focus {
 
 #temperature.critical {
     background-color: #eb4d4b;
+    color: #ffffff;
 }
 
 #tray {
