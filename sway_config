@@ -36,8 +36,11 @@ output * bg /home/user6/circuit.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP1 scale 1.5 
-
+#output eDP1 scale 1.5 res 3840x2160
+#output HDMI-A-1 resolution 1920x1200 position 1920,0
+output eDP1 pos 0 0 scale 2
+output HDMI-A-1 pos 1920 0 res 1920x1200 scale 1
+focus output eDP1
 ### Idle configuration
 #
 # Example configuration:
@@ -177,6 +180,17 @@ input "1:1:AT_Translated_Set_2_keyboard" xkb_layout gb
 
     # focus the child container
     #bindsym $mod+d focus child
+
+    # capture all screens to clipboard    
+    bindsym Shift+Print exec grim - | wl-copy    
+    
+    # capture the specified screen area to clipboard    
+    bindsym Shift+Alt+Print exec grim -g "$(slurp)" - | wl-copy    
+        
+    # capture the focused monitor to clipboard    
+    bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+
+
 #
 # Scratchpad:
 #
