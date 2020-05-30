@@ -59,3 +59,17 @@ source ~/dotfiles/helm_completions.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /usr/share/nvm/init-nvm.sh
+#compdef platformio
+_platformio() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _PLATFORMIO_COMPLETE=complete-zsh  platformio)
+}
+if [[ "$(basename -- ${(%):-%x})" != "_platformio" ]]; then
+  compdef _platformio platformio
+fi
+#compdef pio
+_pio() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _PIO_COMPLETE=complete-zsh  pio)
+}
+if [[ "$(basename -- ${(%):-%x})" != "_pio" ]]; then
+  compdef _pio pio
+fi
