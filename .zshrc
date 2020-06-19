@@ -25,7 +25,7 @@ pathadd ~/bin
 pathadd ~/bin/VSCode-linux-x64/bin
 pathadd $HOME/.linkerd2/bin
 pathadd ${KREW_ROOT:-$HOME/.krew}/bin
-
+pathadd ~/.cargo/bin
 export EDITOR=nvim
 
 # setup expected defaults for ohmyzsh based plugins (kubectl for completion)
