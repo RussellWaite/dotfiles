@@ -17,7 +17,7 @@ robbyrussell/oh-my-zsh path:plugins/docker
 
 # other
 robbyrussell/oh-my-zsh path:plugins/golang
-robbyrussell/oh-my-zsh path:plugins/ufw
+#robbyrussell/oh-my-zsh path:plugins/ufw
 
 # trial (new stuff goes here until it's found useful)
 # 12/06/2019

@@ -13,7 +13,10 @@ ln -sv ~/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -sv ~/dotfiles/sway_conf ~/.config/sway/config
 ln -sv ~/dotfiles/waybar_config.json ~/.config/waybar/config
 ln -sv ~/dotfiles/waybar_style.css ~/.config/waybar/style.css
+ln -sv ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+
 #need to install antibody if not already installed - or just warn user...
+
 
 antibody bundle < .zsh_plugins.txt > .zsh_plugins.sh
 ln -sv ~/dotfiles/.zsh_plugins.sh ~

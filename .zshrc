@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100000
@@ -23,7 +30,6 @@ export GOPATH=$HOME/go
 pathadd $GOPATH/bin
 pathadd ~/bin
 pathadd ~/bin/VSCode-linux-x64/bin
-pathadd $HOME/.linkerd2/bin
 pathadd ${KREW_ROOT:-$HOME/.krew}/bin
 pathadd ~/.cargo/bin
 export EDITOR=nvim
@@ -44,6 +50,8 @@ mkdir -p $ZSH_CACHE_DIR
 #export TERM=screen-256color
 export TERM="xterm-256color"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/dotfiles/.powerlevel10k_config.sh
 alias colours='f(){ for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done; }; f'
 

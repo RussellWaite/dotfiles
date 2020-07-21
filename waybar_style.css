@@ -7,7 +7,7 @@ taken from https://github.com/Alexays/Waybar/blob/master/resources/style.css
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -46,8 +46,13 @@ window#waybar.chromium {
     background-color: transparent;
     color: #f0932b;
     border-bottom: 3px solid transparent;
+    font-size: 24px;
 }
 
+
+#workspaces * {
+    font-size: 18px
+}
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
@@ -79,6 +84,7 @@ window#waybar.chromium {
 #network,
 #pulseaudio,
 #custom-media,
+#custom-pacman,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -86,8 +92,9 @@ window#waybar.chromium {
     padding: 0 10px;
     margin: 0 4px;
     color: #f0932b;
+    background-color: #2d3436;
 }
-
+    
 #clock {
     background-color: #2d3436;
 }
@@ -123,36 +130,15 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #2d3436;
-}
-
-#memory {
-    background-color: #2d3436;
-}
-
-#backlight {
-    background-color: #2d3436;
-}
-
-#network {
-    background-color: #2d3436;
-}
-
 #network.disconnected {
     background-color: #f53c3c;
     color: #ffffff;
-}
-
-#pulseaudio {
-    background-color: #2d3436;
 }
 
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
 }
-
 #custom-media {
     background-color: #66cc99;
     color: #2a5c45;
@@ -167,21 +153,10 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-    background-color: #2d3436;
-}
 
 #temperature.critical {
     background-color: #eb4d4b;
     color: #ffffff;
-}
-
-#tray {
-    background-color: #2980b9;
-}
-
-#idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
